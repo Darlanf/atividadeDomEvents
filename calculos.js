@@ -30,16 +30,11 @@ function calcularValores () {
 
 function salvarLocalStorage(){
 
-    // chave (identificação) - valor
-    // vou utilizar o atributo id como chave no localStorage
-    // vou utilizar o value como valor a ser armazenado no localstorage
-
     let listaValores = document.querySelectorAll('input');
 
     for(let input of listaValores){
         console.log(input);
         
-        //setItem -> cria os registros no localStorage
         localStorage.setItem(input.id, input.value);
         
     }
@@ -51,7 +46,6 @@ function buscarLocalStorage(){
 
     for(let input of listaValores){
 
-        //getItem
         let valorLocalStorage = localStorage.getItem(input.id);
         input.value = valorLocalStorage;
         
